@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from './pages/home/Page'
-import Artist from './pages/artists/Index'
+import Artist from './pages/artists/Page'
 
 import './App.css';
 

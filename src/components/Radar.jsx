@@ -1,4 +1,5 @@
 import React from 'react'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import {Radar} from 'react-chartjs-2';
 
 function Component(props) {
@@ -9,20 +10,35 @@ function Component(props) {
                         maintainAspectRatio: false,
                         title: {
                             display: true,
-                            text: props.title
+                            text: props.title,
+                            fontSize: 20,
                         },
                         legend: {
-                            display: false
+                            display: false,
                         },
                         scale: {
                             angleLines: {
-                                display: false
+                                display: false,
                             },
                             ticks: {
                                 suggestedMin: 0,
                                 suggestedMax: 100,
+                                display: false,
+                                stepSize: 20
+                            },
+                            pointLabels: {
+                                fontSize: 16,
+                            },
+                        },
+                        plugins: {
+                            datalabels: {
+                                anchor: 'center',
+                                align: 'end',
+                                font: {
+                                    weight: "bold"
+                                }
                             }
-            }
+                        }
         }} />
     )
 }

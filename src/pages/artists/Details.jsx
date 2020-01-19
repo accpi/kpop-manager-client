@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Radar from '../../components/Radar'
+import StatPanel from './components/StatPanel'
 
 const artist = {
     first_name: 'Nelson',
@@ -11,17 +11,20 @@ const artist = {
 }
 
 const data = {
-    labels: ['Pretty', 'Sexy', 'Elegant', 'Cool', 'Cute'],
+    labels: [['Pretty', ''], ['Sexy', ''], ['', 'Elegant'], ['', 'Cool'], ['Cute', '']],
     datasets: [
         {
             label: 'Visuals',
             backgroundColor: 'rgba(255,99,132,0.2)',
             borderColor: 'rgba(255,99,132,1)',
-            pointBackgroundColor: 'rgba(255,99,132,1)',
-            pointBorderColor: '#fff',
+            pointStyle: 'circle',
+            pointBackgroundColor: 'rgba(255,99,132,0.5)',
+            pointBorderColor: 'rgba(255,99,132,1)',
+            pointBorderWidth: 3,
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(255,99,132,1)',
-            data: [65, 59, 90, 81, 56]
+            pointRadius: 5,
+            data: [100, 100, 100, 100, 100]
         }
     ],
 };
@@ -40,21 +43,8 @@ function Component() {
             </div>
 
             <div style={{display: 'flex', flexWrap: 'wrap'}}>
-                <div style={{ width: 500, height: 300}}>
-                    <Radar data={data} title={"Visuals"} />
-                </div>
-                <div style={{ width: 500, height: 300}}>
-                    <Radar data={data} title={"Vocals"} />
-                </div> 
-                <div style={{ width: 500, height: 300}}>
-                    <Radar data={data} title={"Dance"} />
-                </div>
-                <div style={{ width: 500, height: 300}}>
-                    <Radar data={data} title={"Personality"} />
-                </div> 
-                <div style={{ width: 500, height: 300}}>
-                    <Radar data={data} title={"Intangibles"} />
-                </div>               
+                <StatPanel data={data} title={'Visuals'} />
+                <StatPanel data={data} title={'Vocals'} />             
             </div>
         </>
     )

@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import Home from './pages/home/Page'
+import Artist from './pages/artists/Index'
+
 import './App.css';
 
+const routes = [
+	{
+		path: "/artists",
+		sidebar_title: "Artists",
+		component: () => <Artist />
+	},
+	{
+		path: '/',
+		sidebar_title: 'Home',
+		component: () => <Home />
+	}
+];
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  	return (
+    	<div>
+			<BrowserRouter>
+				<Switch>
+					{routes.map((route, index) => (
+						<Route
+							key={ index }
+							path={ route.path }
+							exact={ route.exact }
+							children={ route.component }
+						/>
+					))}
+				</Switch>
+			</BrowserRouter>
+    	</div>
+  	);
 }
 
 export default App;

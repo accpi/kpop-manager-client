@@ -1,6 +1,6 @@
 import React from 'react'
-import ChartDataLabels from 'chartjs-plugin-datalabels';
-import {Radar} from 'react-chartjs-2';
+import {Radar} from 'react-chartjs-2'
+require('chartjs-plugin-datalabels')
 
 function Component(props) {
     return (

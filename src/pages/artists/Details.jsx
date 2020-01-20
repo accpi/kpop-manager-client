@@ -70,14 +70,14 @@ function Component() {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>{(artist.visuals.pretty + artist.visuals.sexy + artist.visuals.cute + artist.visuals.elegant + artist.visuals.cool + 
+                                        <td>{Math.round((artist.visuals.pretty + artist.visuals.sexy + artist.visuals.cute + artist.visuals.elegant + artist.visuals.cool + 
                                             artist.vocals.breathing + artist.vocals.diction + artist.vocals.range + artist.vocals.control + artist.vocals.empathy + 
                                             artist.dance.balance + artist.dance.posture + artist.dance.coordination + artist.dance.flexibility + artist.dance.strength + 
-                                            artist.dance.balance + artist.dance.posture + artist.dance.coordination + artist.dance.flexibility + artist.dance.strength) / 20}</td>
-                                        <td>{(artist.visuals.pretty + artist.visuals.sexy + artist.visuals.cute + artist.visuals.elegant + artist.visuals.cool) / 5}</td>
-                                        <td>{(artist.vocals.breathing + artist.vocals.diction + artist.vocals.range + artist.vocals.control + artist.vocals.empathy) / 5}</td>
-                                        <td>{(artist.dance.balance + artist.dance.posture + artist.dance.coordination + artist.dance.flexibility + artist.dance.strength) / 5}</td>
-                                        <td>{(artist.personality.funny + artist.personality.cuteness + artist.personality.engaging + artist.personality.outgoing + artist.personality.pleasant) / 5}</td>
+                                            artist.dance.balance + artist.dance.posture + artist.dance.coordination + artist.dance.flexibility + artist.dance.strength) / 20)}</td>
+                                        <td>{Math.round((artist.visuals.pretty + artist.visuals.sexy + artist.visuals.cute + artist.visuals.elegant + artist.visuals.cool) / 5)}</td>
+                                        <td>{Math.round((artist.vocals.breathing + artist.vocals.diction + artist.vocals.range + artist.vocals.control + artist.vocals.empathy) / 5)}</td>
+                                        <td>{Math.round((artist.dance.balance + artist.dance.posture + artist.dance.coordination + artist.dance.flexibility + artist.dance.strength) / 5)}</td>
+                                        <td>{Math.round((artist.personality.funny + artist.personality.cuteness + artist.personality.engaging + artist.personality.outgoing + artist.personality.pleasant) / 5)}</td>
                                         <td>{artist.intangibles.stamina}</td>
                                         <td>{artist.intangibles.morale}</td>
                                         <td>{artist.intangibles.songwriting}</td>

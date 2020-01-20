@@ -15,7 +15,7 @@ function getAge(dateString) {
 function Component(props) {
     return (
         <div className="panel-wrapper">
-            <table>
+            <table className="striped-table">
                 <thead>
                     <tr>
                         <th>Stage Name</th>

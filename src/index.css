@@ -32,6 +32,7 @@ td, th {
 table {
   width: 100%;
   border-collapse: separate;
+  border-spacing: 0;
 }
 
 thead {
@@ -40,6 +41,14 @@ thead {
 
 tbody td {
   padding-top: 5px;
+}
+
+.striped-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+tbody p {
+  padding: 10px;
 }
 
 #header h2 {
@@ -111,7 +120,7 @@ tbody td {
 }
 
 .radar-table th {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 #artist-info-bar {

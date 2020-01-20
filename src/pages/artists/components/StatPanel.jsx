@@ -18,7 +18,7 @@ function Component(props) {
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgba(199, 0, 57, 0.8)',
                 pointRadius: 5,
-                lineTension: -0.08,
+                lineTension: -0.12,
                 data: [props.dataSet[0], props.dataSet[1], props.dataSet[2], props.dataSet[3], props.dataSet[4]]
             }
         ],
@@ -40,6 +40,10 @@ function Component(props) {
                                 <td>{data.datasets[0].data[index]}</td>
                             </tr>
                         ))}
+                        <tr>
+                            <th>Overall</th>
+                            <td>{Math.round((data.datasets[0].data[0] + data.datasets[0].data[1] + data.datasets[0].data[2] + data.datasets[0].data[3] + data.datasets[0].data[4]) / 5)}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

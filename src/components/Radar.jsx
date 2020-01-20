@@ -12,6 +12,7 @@ function Component(props) {
                             display: true,
                             text: props.title,
                             fontSize: 20,
+                            fontColor: 'black'
                         },
                         legend: {
                             display: false,
@@ -28,6 +29,7 @@ function Component(props) {
                             },
                             pointLabels: {
                                 fontSize: 16,
+                                fontColor: 'black'
                             },
                         },
                         plugins: {

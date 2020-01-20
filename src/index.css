@@ -14,8 +14,129 @@ code {
 
 * {
   box-sizing: border-box;
- }
- *:before,
- *:after {
+}
+*:before,
+*:after {
   box-sizing: border-box;
- }
+}
+
+html {
+  background-color: #E9FEFF;
+  border-color: #BDBDBD;
+}
+
+td, th {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+thead {
+  border-bottom: 1px solid;
+}
+
+tbody td {
+  padding-top: 5px;
+}
+
+#header h2 {
+  font-size: 40px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+#footer p {
+  margin: 0;
+}
+
+#app-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 50px; /* height of your footer */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.panel-wrapper {
+  border: 1px solid;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 10px 20px;
+
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.2);
+}
+
+.stat-panel {
+  width: 47.5%;
+  display: flex;
+}
+
+.stat-panel:first-of-type {
+  margin-right: 5%;
+}
+
+#artist-stat-summary-bar {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.radar {
+  width: 70%;
+  height: 300px;
+}
+
+.radar-table {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.radar-table th {
+  padding-right: 10px;
+}
+
+#artist-info-bar {
+  margin-top: 20px;
+}
+
+#artist-info-bar h4 {
+  margin: 0 auto;
+  font-size: 35px; 
+  font-weight: 500;
+}
+
+#artist-info-bar h5 {
+  margin: 0 auto;
+  font-size: 18px; 
+  font-weight: 500;
+}
+
+#artist-info-bar h5:last-of-type {
+  font-weight: 400;
+}
+
+.stat-panel-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  width: 100%;
+}

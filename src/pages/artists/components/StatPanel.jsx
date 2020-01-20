@@ -9,15 +9,16 @@ function Component(props) {
         datasets: [
             {
                 label: props.title,
-                backgroundColor: 'rgba(255,99,132,0.2)',
-                borderColor: 'rgba(255,99,132,1)',
+                backgroundColor: 'rgba(199, 0, 57, 0.2)',
+                borderColor: 'rgba(199, 0, 57, 0.6)',
                 pointStyle: 'circle',
-                pointBackgroundColor: 'rgba(255,99,132,0.5)',
-                pointBorderColor: 'rgba(255,99,132,1)',
+                pointBackgroundColor: 'rgba(199, 0, 57, 0.5)',
+                pointBorderColor: 'rgba(199, 0, 57, 0.8)',
                 pointBorderWidth: 3,
                 pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgba(255,99,132,1)',
+                pointHoverBorderColor: 'rgba(199, 0, 57, 0.8)',
                 pointRadius: 5,
+                lineTension: -0.08,
                 data: [props.dataSet[0], props.dataSet[1], props.dataSet[2], props.dataSet[3], props.dataSet[4]]
             }
         ],
@@ -25,17 +26,17 @@ function Component(props) {
 
 
     return (
-        <div style={{ width:'50%', display: 'flex'}}>
-            <div style={{ width: '70%', height: 300 }}>
+        <div className="stat-panel panel-wrapper">
+            <div className="radar">
                 <Radar data={data} title={props.title} />
             </div>
-            <div style={{ width: '15%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="radar-table">
                 <table>
                     <thead></thead>
                     <tbody>
                         {data.labels.map((label, index) => (
                             <tr key={index}>
-                                <th style={{textAlign: 'left', paddingRight: '10px'}}>{label}</th>
+                                <th>{label}</th>
                                 <td>{data.datasets[0].data[index]}</td>
                             </tr>
                         ))}

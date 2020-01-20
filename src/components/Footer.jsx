@@ -2,11 +2,9 @@ import React from 'react'
 
 function Component() {
     return (
-        <>
-            <br />
-            <p>Created by Nelson and Joseph Kim</p>
-            <p>KPOP Manager - Copyright 2020</p>
-        </>
+        <div id="footer">
+            <p>Star Cat Cafe &copy; 2020 // Nelson and Joseph Kim</p>
+        </div>
     )
 }
 

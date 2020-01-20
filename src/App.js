@@ -24,15 +24,7 @@ const routes = [
 function App() {
   	return (
 		<>
-			<div style={{
-				minHeight: '100vh', /* will cover the 100% of viewport */
-				overflow: 'hidden',
-				display: 'block',
-				position: 'relative',
-				paddingBottom: '100px', /* height of your footer */
-				width: '80%',
-				margin: '0 auto',
-			}}>
+			<div id="app-container">
 				<BrowserRouter>
 					<Switch>
 						{routes.map((route, index) => (
@@ -45,15 +37,7 @@ function App() {
 						))}
 					</Switch>
 				</BrowserRouter>
-
-				<div style={{
-					position: "absolute",
-					bottom: 0,
-					width: '100%',
-					height: '100px'
-				}}>
-					<Footer />
-				</div>
+				<Footer />
 			</div>
 		</>
   	);

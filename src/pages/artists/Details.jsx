@@ -41,19 +41,19 @@ function Component() {
     if (pageLoad && artist) {
         return (
             <>
-                <div style={{ margin: '0 auto', width: '100%'}}>
-                    <div id='artist-info-bar' style={{ margin: '20px auto' }}>
-                        <h4 style={{ margin: '0 auto', fontSize: 35, fontWeight: 500 }}>{artist.info.stage_name}{artist.group.name ? 
+                <div className="container">
+                    <div id='artist-info-bar'>
+                        <h4>{artist.info.stage_name}{artist.group.name ? 
                                                                         ', ' + artist.group.name : 
                                                                         null} 
                         </h4>
-                        <h5 style={{ margin: '0 auto', fontSize: 18, fontWeight: 500}}>{artist.info.first_name} {artist.info.last_name}, {getAge(artist.info.birthday)} ({moment(artist.info.birthday).format()})</h5>
-                        <h5 style={{ margin: '0 auto', fontSize: 18, fontWeight: 400}}>{artist.info.city}, {artist.info.country}</h5>
+                        <h5>{artist.info.first_name} {artist.info.last_name}, {getAge(artist.info.birthday)} ({moment(artist.info.birthday).format()})</h5>
+                        <h5>{artist.info.city}, {artist.info.country}</h5>
                     </div>
                 
-                    <div id='artist-stat-summary-bar' style={{ margin: '20px auto' }}>
+                    <div id='artist-stat-summary-bar' className="panel-wrapper">
                         <div>
-                            <table style={{ margin: '0 auto' }}>
+                            <table>
                                 <thead>
                                     <tr>
                                         <th>Overall</th>
@@ -89,7 +89,7 @@ function Component() {
                         </div>
                     </div>
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '50px', width: '100%' }}>
+                    <div className="stat-panel-container">
                         <StatPanel title={'Visuals'} 
                             dataSet={[artist.visuals.pretty, artist.visuals.sexy, artist.visuals.cute, artist.visuals.elegant, artist.visuals.cool]}
                             dataLabels={['Pretty', 'Sexy', 'Cute', 'Elegant', 'Cool']}
@@ -100,7 +100,7 @@ function Component() {
                         />             
                     </div>
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '50px', width: '100%' }}>
+                    <div className="stat-panel-container">
                         <StatPanel title={'Dance'} 
                             dataSet={[artist.dance.balance, artist.dance.posture, artist.dance.coordination, artist.dance.flexibility, artist.dance.strength]}
                             dataLabels={['Balance', 'Posture', 'Coordination', 'Flexibility', 'Strength']}
@@ -111,10 +111,10 @@ function Component() {
                         />             
                     </div>
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', marginBottom: '50px', width: '100%' }}>
+                    <div className="stat-panel-container">
                         <StatPanel title={'Intangibles/Skills'} 
                             dataSet={[artist.intangibles.stamina, artist.intangibles.morale, artist.intangibles.composition, artist.intangibles.songwriting, artist.intangibles.choreography]}
-                            dataLabels={['Stamina', 'Morale', 'Composition', 'Songwriting', 'Choreography']}
+                            dataLabels={['Stamina', 'Morale', 'Composition', 'Songwriting', 'Choreo']}
                         />           
                     </div>
                 </div>

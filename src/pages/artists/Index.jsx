@@ -25,7 +25,7 @@ function Component(props) {
 
     if (pageLoad && artists) {
         return (
-            <div style={{ margin: '0 auto', width: '100%'}}>
+            <div className="container">
                 <Header title={'Artists'} />
                 <ArtistList artists={artists} />
             </div>

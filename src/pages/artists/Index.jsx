@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import ArtistList from './components/ArtistList'
 
 function Component(props) {
@@ -26,11 +25,10 @@ function Component(props) {
 
     if (pageLoad && artists) {
         return (
-            <>
+            <div style={{ margin: '0 auto', width: '100%'}}>
                 <Header title={'Artists'} />
                 <ArtistList artists={artists} />
-                <Footer />
-            </>
+            </div>
         )
     }
     else {
@@ -38,7 +36,6 @@ function Component(props) {
             <>
                 <Header title={'Artists'} />
                 <h1>Loading</h1>
-                <Footer />
             </>
         )
     }

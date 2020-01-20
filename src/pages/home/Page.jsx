@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 
 function Component(props) {
     return (
@@ -10,7 +9,6 @@ function Component(props) {
             <div>
                 <p>BODY</p>
             </div>
-            <Footer />
         </>
     )
 }

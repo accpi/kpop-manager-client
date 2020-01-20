@@ -1,13 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-var moment = require('moment');
-moment().format();
-moment.defaultFormat = "MMMM D, YYYY";
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
 
 function Component(props) {
     return (
-        <table>
+        <table style={{ width: '100%' }}>
             <thead>
                 <tr>
                     <th>Stage Name</th>
@@ -38,8 +45,11 @@ function Component(props) {
                             <td>{artist.group_name ? artist.group_name : 'N/A'}</td>
                             <td>{artist.sex = 1 ? 'Male' : 'Female'}</td>
                             <td>{artist.city}, {artist.country}</td>
-                            <td>{moment(artist.birthday).format()}</td>
-                            <td>10</td>
+                            <td>{getAge(artist.birthday)}</td>
+                            <td>{(artist.pretty + artist.cool + artist.cute + artist.elegant + artist.sexy + 
+                                  artist.breathing + artist.diction + artist.range + artist.control + artist.empathy + 
+                                  artist.balance + artist.posture + artist.coordination + artist.flexibility + artist.strength +
+                                  artist.funny + artist.cuteness + artist.engaging + artist.outgoing + artist.pleasant) / 20}</td>
                             <td>{(artist.pretty + artist.cool + artist.cute + artist.elegant + artist.sexy) / 5}</td>
                             <td>{(artist.breathing + artist.diction + artist.range + artist.control + artist.empathy) / 5}</td>
                             <td>{(artist.balance + artist.posture + artist.coordination + artist.flexibility + artist.strength) / 5}</td>

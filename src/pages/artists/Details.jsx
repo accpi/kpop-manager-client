@@ -41,7 +41,7 @@ function Component() {
     if (pageLoad && artist) {
         return (
             <>
-                <div style={{ margin: '0 auto', width: '80%'}}>
+                <div style={{ margin: '0 auto', width: '100%'}}>
                     <div id='artist-info-bar' style={{ margin: '20px auto' }}>
                         <h4 style={{ margin: '0 auto', fontSize: 35, fontWeight: 500 }}>{artist.info.stage_name}{artist.group.name ? 
                                                                         ', ' + artist.group.name : 

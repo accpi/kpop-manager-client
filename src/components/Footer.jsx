@@ -1,10 +1,11 @@
 import React from 'react'
 
-function Component(props) {
+function Component() {
     return (
         <>
             <br />
-            <p>Footer Text</p>
+            <p>Created by Nelson and Joseph Kim</p>
+            <p>KPOP Manager - Copyright 2020</p>
         </>
     )
 }

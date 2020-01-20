@@ -25,11 +25,11 @@ function Component(props) {
 
 
     return (
-        <>
-            <div style={{ width: 500, height: 300}}>
+        <div style={{ width:'50%', display: 'flex'}}>
+            <div style={{ width: '70%', height: 300 }}>
                 <Radar data={data} title={props.title} />
             </div>
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{ width: '15%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <table>
                     <thead></thead>
                     <tbody>
@@ -42,7 +42,7 @@ function Component(props) {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     )
 }
 

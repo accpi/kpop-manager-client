@@ -101,9 +101,24 @@ tbody p {
   margin-right: 5%;
 }
 
-#artist-stat-summary-bar {
+.artist-stat-summary-bar {
   width: 80%;
   margin: 20px auto;
+}
+
+.artist-bar {
+  width: 80%;
+  display: flex;
+  margin: 20px auto;
+}
+
+.artist-bar h3 {
+  margin: 0 0 7px;
+}
+
+.artist-bar-double {
+  width: 50%;
+  margin: 0 auto;
 }
 
 .radar {

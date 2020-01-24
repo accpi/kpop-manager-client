@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import StatPanel from './components/StatPanel'
 import axios from 'axios'
+
+import StatPanel from './components/StatPanel'
+import AssignGroup from './components/AssignGroup'
 
 var moment = require('moment');
 moment().format();
@@ -51,7 +53,7 @@ function Component() {
                         <h5>{artist.info.city}, {artist.info.country}</h5>
                     </div>
                 
-                    <div id='artist-stat-summary-bar' className="panel-wrapper">
+                    <div className="panel-wrapper artist-stat-summary-bar">
                         <div>
                             <table>
                                 <thead>
@@ -86,6 +88,15 @@ function Component() {
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                    
+                    <div className="artist-bar">
+                        <div className="artist-bar-double panel-wrapper">
+                            <AssignGroup artist_id={id} />
+                        </div>
+                        <div className="artist-bar-double panel-wrapper">
+                            <h3>Empty Panel</h3>
                         </div>
                     </div>
 

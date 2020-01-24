@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from './pages/home/Page'
 import Artist from './pages/artists/Page'
+import Group from './pages/groups/Page'
 import Footer from './components/Footer'
 
 import './App.css';
@@ -12,6 +13,11 @@ const routes = [
 		path: "/artists",
 		sidebar_title: "Artists",
 		component: () => <Artist />
+	},
+	{
+		path: "/groups",
+		sidebar_title: "Groups",
+		component: () => <Group />
 	},
 	{
 		path: '/',

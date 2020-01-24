@@ -2,18 +2,19 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 import Header from '../../components/Header'
-import ArtistList from './components/ArtistList'
+import GroupList from './components/GroupList'
+import Create from './components/CreateGroup'
 
 function Component(props) {
-    const [artists, setArtists] = useState(null)
+    const [groups, setGroups] = useState(null)
     const [pageLoad, setPageLoad] = useState(false)
 
     useEffect(() => {
         if (!pageLoad) {
-            axios.get('http://localhost:3000/artists/user/1')
+            axios.get('http://localhost:3000/groups/user/1')
             .then(response => {
                 if (response.data) {
-                    setArtists(response.data)
+                    setGroups(response.data)
                     setPageLoad(true)
                 }
             })
@@ -23,18 +24,19 @@ function Component(props) {
         }
     })
 
-    if (pageLoad && artists) {
+    if (pageLoad && groups) {
         return (
             <div className="container">
-                <Header title={'Artists'} />
-                <ArtistList artists={artists} />
+                <Header title={'Groups'} />
+                <GroupList groups={groups} />
+                <Create />
             </div>
         )
     }
     else {
         return (
             <>
-                <Header title={'Artists'} />
+                <Header title={'Groups'} />
                 <h1>Loading</h1>
             </>
         )

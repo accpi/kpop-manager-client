@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 function Component(props) {
-    const [artist, setArtist] = useState(props.artist_id)
+    const [artist] = useState(props.artist_id)
     const [groups, setGroups] = useState()
     const [selectValue, setSelectValue] = useState(0)
 
